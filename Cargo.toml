@@ -1,0 +1,17 @@
+[package]
+name = "fledge-hangman"
+version = "0.1.0"
+edition = "2021"
+description = "A fledge plugin that plays hangman with identifiers from your codebase"
+authors = ["CorvidLabs"]
+license = "MIT"
+
+[[bin]]
+name = "fledge-hangman"
+path = "src/main.rs"
+
+[dependencies]
+rand = "0.8"
+console = "0.15"
+walkdir = "2"
+regex = "1"

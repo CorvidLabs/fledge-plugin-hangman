@@ -1,0 +1,13 @@
+[plugin]
+name = "fledge-plugin-hangman"
+version = "0.1.0"
+description = "Play hangman with identifiers from your codebase — structs, functions, traits, and more"
+author = "CorvidLabs"
+
+[[commands]]
+name = "hangman"
+description = "Play a round of hangman using identifiers from your project"
+binary = "target/release/fledge-hangman"
+
+[hooks]
+build = "cargo build --release"
