@@ -178,14 +178,21 @@ fn display_word(word: &str, guessed: &HashSet<char>) -> String {
                 '?'
             }
         })
-        .collect::<Vec<_>>()
-        .iter()
         .map(|c| c.to_string())
         .collect::<Vec<_>>()
         .join(" ")
 }
 
 fn main() {
+    let args: Vec<String> = std::env::args().collect();
+    if args.iter().any(|a| a == "--help" || a == "-h") {
+        println!("Usage: fledge-hangman");
+        println!();
+        println!("Play hangman with identifiers from your codebase.");
+        println!("Run from any project root with source files.");
+        std::process::exit(0);
+    }
+
     let dir = std::env::current_dir().expect("Cannot determine current directory");
 
     println!();
@@ -218,16 +225,13 @@ fn main() {
     let (word, hint) = identifiers.choose(&mut rng).unwrap();
     let max_wrong = HANGMAN_STAGES.len() - 1;
 
+    let word_lower: String = word.chars().map(|c| c.to_ascii_lowercase()).collect();
     let mut guessed: HashSet<char> = HashSet::new();
     let mut wrong_guesses: Vec<char> = Vec::new();
     let mut wrong_count = 0;
 
     println!();
-    println!(
-        "  Hint: {} ({} letters)",
-        style(&hint).yellow(),
-        word.len()
-    );
+    println!("  Hint: {} ({} letters)", style(&hint).yellow(), word.len());
     println!();
 
     loop {
@@ -252,7 +256,6 @@ fn main() {
             );
         }
 
-        let word_lower: String = word.chars().map(|c| c.to_ascii_lowercase()).collect();
         let all_guessed = word_lower.chars().all(|c| c == '_' || guessed.contains(&c));
 
         if all_guessed {
