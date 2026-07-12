@@ -1,0 +1,10 @@
+# fledge.toml — project task definitions
+[tasks]
+fmt = "cargo fmt --check"
+lint = "cargo clippy -- -D warnings"
+test = "cargo test"
+smoke = "cargo build --release && ./target/release/fledge-hangman --help"
+
+[lanes.verify]
+description = "Format, lint, test, build, and smoke-test the Hangman plugin"
+steps = ["fmt", "lint", "test", "smoke"]
