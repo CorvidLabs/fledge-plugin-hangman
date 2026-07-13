@@ -24,6 +24,10 @@ The interactive round SHALL reveal correct guesses, track incorrect guesses, and
 
 Help SHALL exit successfully without interaction, while an empty project SHALL explain the missing prerequisite and exit non-zero.
 
+Acceptance Criteria
+- The native Fledge verification lane passes formatting, clippy, tests, release build, and CLI help smoke.
+- Verification does not require an interactive game session.
+
 ## Constraints
 
 - Discovery is intentionally heuristic and limited to the configured source extensions and naming patterns.
