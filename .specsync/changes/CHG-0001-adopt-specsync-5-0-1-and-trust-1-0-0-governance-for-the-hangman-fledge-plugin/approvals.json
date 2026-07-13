@@ -1,0 +1,63 @@
+{
+  "approvals": [
+    {
+      "gate": "definition",
+      "actor": "user:0xLeif",
+      "timestamp": 1783953990,
+      "digest": "4ea3ea943d4d5e951b5469e713639191865af726424dad0d7a4fc133942e3f90",
+      "note": "Definition approved after artifact, review-correction, and preliminary native-verification audit."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1783954150,
+      "digest": "489357bdef5e7691b08b60d910c8f6fd9b09b2f93324ea24bd65256ac00304de",
+      "note": "Closing approval recorded after successful committed-head native verification with explicit requirement evidence."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1783982413,
+      "digest": "87332eb5a7d23fc7a0f0a7cd168f44890698763f041a2746747fe14633bf2095",
+      "note": "Fresh closing approval after CHG-0002 native verification; prior canonical delta remains non-replaying"
+    }
+  ],
+  "reopenings": [
+    {
+      "schema_version": 1,
+      "change_id": "CHG-0001-adopt-specsync-5-0-1-and-trust-1-0-0-governance-for-the-hangman-fledge-plugin",
+      "actor": "user:0xLeif",
+      "reason": "CHG-0002 corrects shared canonical and governance inputs after review; record fresh evidence without replaying the accepted delta",
+      "timestamp": 1783982412,
+      "from_state": "accepted",
+      "to_state": "verifying",
+      "superseded_approval": {
+        "gate": "acceptance",
+        "actor": "user:0xLeif",
+        "timestamp": 1783954150,
+        "digest": "489357bdef5e7691b08b60d910c8f6fd9b09b2f93324ea24bd65256ac00304de",
+        "note": "Closing approval recorded after successful committed-head native verification with explicit requirement evidence."
+      },
+      "prior_verification": {
+        "timestamp": 1783954064,
+        "commit": "cf5cbff268152fd2e9f4640187f94cf6da9c386f",
+        "contract_digest": "4ea3ea943d4d5e951b5469e713639191865af726424dad0d7a4fc133942e3f90",
+        "workspace_digest": "79a25223809014d183f5d30f17fc7b2d60007f9a39c97c758b13bec937faedf0",
+        "acceptance_input_digest": "98bdd64ec557350bcbe4dde105ba7be8f0ad8bfa092e1778167416e8e5cb97a2",
+        "passed": true,
+        "commands": [
+          {
+            "command": "fledge lanes run verify",
+            "success": true,
+            "exit_code": 0
+          }
+        ],
+        "requirement_ids": [
+          "REQ-hangman-004"
+        ]
+      },
+      "stale_acceptance_input_digest": "98bdd64ec557350bcbe4dde105ba7be8f0ad8bfa092e1778167416e8e5cb97a2",
+      "current_acceptance_input_digest": "0dbe279aa927890efe6459ea77d5ff055f52e84b5f43c23f7d510555a8fdc2f3"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "timestamp": 1783982413,
+  "commit": "e2d83fd307f697a5c172d2563c969fdcde6fa87a",
+  "contract_digest": "4ea3ea943d4d5e951b5469e713639191865af726424dad0d7a4fc133942e3f90",
+  "workspace_digest": "0c1527a697a4c2cc8dae70668daeb9a8f00e95ff8d42640c3c3a59581d0a642c",
+  "acceptance_input_digest": "0dbe279aa927890efe6459ea77d5ff055f52e84b5f43c23f7d510555a8fdc2f3",
+  "passed": true,
+  "commands": [
+    {
+      "command": "fledge lanes run verify",
+      "success": true,
+      "exit_code": 0
+    }
+  ],
+  "requirement_ids": [
+    "REQ-hangman-004"
+  ]
+}

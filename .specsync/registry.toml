@@ -1,0 +1,5 @@
+[registry]
+name = "fledge-plugin-hangman-trust-wave4"
+
+[specs]
+hangman = "specs/hangman/hangman.spec.md"

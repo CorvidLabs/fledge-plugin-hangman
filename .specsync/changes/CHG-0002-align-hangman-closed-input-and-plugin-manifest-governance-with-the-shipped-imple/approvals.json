@@ -1,0 +1,26 @@
+{
+  "approvals": [
+    {
+      "gate": "definition",
+      "actor": "user:0xLeif",
+      "timestamp": 1783982351,
+      "digest": "b9eec33dcec687ff7a6ef21006145d3a578dfa5dcc21f64dd6bb85246f28dd1b",
+      "note": "Approved portable definition for migration-only contract accuracy corrections"
+    },
+    {
+      "gate": "definition",
+      "actor": "user:0xLeif",
+      "timestamp": 1783982378,
+      "digest": "d2b47e32f0bb11edee0162ea9fbd14677625fc2381ada6ca7a764c37bee06d51",
+      "note": "Approved final portable definition with explicit zero-test disclosure"
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1783982392,
+      "digest": "1bfa77940046c5d0a3c6952c557345a4af8ddeee2e5036bd0d508c8a9ae7b8d4",
+      "note": "Closing approval after native compile/lint/smoke verification and explicit shipped EOF behavior review"
+    }
+  ],
+  "reopenings": []
+}
