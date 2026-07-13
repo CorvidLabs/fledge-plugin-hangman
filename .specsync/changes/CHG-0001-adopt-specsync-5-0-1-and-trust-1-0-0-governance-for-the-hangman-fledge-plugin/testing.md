@@ -8,6 +8,7 @@ artifact: testing
 Local acceptance requires:
 
 - `fledge lanes run verify`
+- `REQ-hangman-004` evidence is provided by the native CLI help and test coverage in the verification lane.
 - `specsync check --strict --require-coverage 100 --force`
 - `specsync agents status`
 - `fledge trust doctor`
