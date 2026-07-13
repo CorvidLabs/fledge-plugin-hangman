@@ -1,9 +1,10 @@
 ---
 module: hangman
-version: 2
+version: 3
 status: active
 files:
   - src/main.rs
+  - plugin.toml
 
 db_tables: []
 depends_on: []
@@ -45,7 +46,7 @@ Then the plugin selects a discovered identifier and presents its source kind and
 |-------|------|----------|
 | Current directory unavailable | Startup cannot resolve the working directory | Exit with a clear failure. |
 | No identifiers found | No supported source contains a matching identifier | Explain the repository precondition and exit non-zero. |
-| Input closes | Standard input reaches EOF during a round | End without falsely reporting a successful guess. |
+| Input closes | Standard input reaches EOF during a round | Treat the zero-byte read as empty invalid input and continue prompting until the caller terminates the process. |
 
 ## Dependencies
 
@@ -57,4 +58,5 @@ Then the plugin selects a discovered identifier and presents its source kind and
 | Version | Date | Changes |
 |---------|------|---------|
 | 1 | 2026-07-12 | Document existing identifier discovery and interactive game behavior for SpecSync 5 adoption. |
-| 2026-07-13 | CHG-0001-adopt-specsync-5-0-1-and-trust-1-0-0-governance-for-the-hangman-fledge-plugin: Adopt SpecSync 5.0.1 and Trust 1.0.0 governance for the Hangman Fledge plugin |
+| 2 | 2026-07-13 | CHG-0001-adopt-specsync-5-0-1-and-trust-1-0-0-governance-for-the-hangman-fledge-plugin: Adopt SpecSync 5.0.1 and Trust 1.0.0 governance for the Hangman Fledge plugin |
+| 3 | 2026-07-13 | CHG-0002-align-hangman-closed-input-and-plugin-manifest-governance-with-the-shipped-imple: Align Hangman closed-input and plugin manifest governance with the shipped implementation |

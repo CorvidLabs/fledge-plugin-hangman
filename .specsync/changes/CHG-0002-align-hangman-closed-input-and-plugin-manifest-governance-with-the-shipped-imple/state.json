@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "CHG-0002-align-hangman-closed-input-and-plugin-manifest-governance-with-the-shipped-imple",
+  "slug": "align-hangman-closed-input-and-plugin-manifest-governance-with-the-shipped-imple",
+  "title": "Align Hangman closed-input and plugin manifest governance with the shipped implementation",
+  "description": "Align Hangman closed-input and plugin manifest governance with the shipped implementation",
+  "kind": "bug_fix",
+  "state": "accepted",
+  "canonical_applied": true,
+  "base_commit": "e2d83fd307f697a5c172d2563c969fdcde6fa87a",
+  "created_at": 1783982291,
+  "updated_at": 1783982392,
+  "affected_specs": [
+    "hangman"
+  ],
+  "affected_paths": [
+    "plugin.toml",
+    ".specsync/sdd.json"
+  ],
+  "no_spec_change": false,
+  "no_spec_change_rationale": null,
+  "acceptance_criteria": [
+    "The canonical contract no longer claims EOF termination that the shipped loop does not implement; plugin.toml is governed by the Hangman spec and meaningful-path policy; the malformed version-2 changelog row is corrected; native verification and strict SpecSync 100% coverage pass"
+  ],
+  "selected_artifacts": [
+    "context",
+    "testing",
+    "tasks",
+    "requirements",
+    "docs"
+  ],
+  "dependencies": [],
+  "answers": {
+    "architecture_risk": "no",
+    "public_contract": "yes"
+  }
+}

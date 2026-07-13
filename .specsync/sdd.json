@@ -7,6 +7,7 @@
     "tests/",
     "site/",
     ".github/",
+    "plugin.toml",
     "Cargo.toml",
     "Cargo.lock",
     "action.yml",
