@@ -5,11 +5,11 @@
   "title": "Align Hangman closed-input and plugin manifest governance with the shipped implementation",
   "description": "Align Hangman closed-input and plugin manifest governance with the shipped implementation",
   "kind": "bug_fix",
-  "state": "archived",
+  "state": "accepted",
   "canonical_applied": true,
   "base_commit": "e2d83fd307f697a5c172d2563c969fdcde6fa87a",
   "created_at": 1783982291,
-  "updated_at": 1784052375,
+  "updated_at": 1783982392,
   "affected_specs": [
     "hangman"
   ],
