@@ -1,6 +1,6 @@
 ---
 id: CHG-0001-adopt-specsync-5-0-1-and-trust-1-0-0-governance-for-the-hangman-fledge-plugin
-state: accepted
+state: archived
 type: migration
 base_commit: 61b2c4bda6923a5c6312ea2dc8ac66154c6ca538
 ---
