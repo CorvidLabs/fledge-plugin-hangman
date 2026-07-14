@@ -1,6 +1,6 @@
 ---
 id: CHG-0002-align-hangman-closed-input-and-plugin-manifest-governance-with-the-shipped-imple
-state: archived
+state: accepted
 type: bug_fix
 base_commit: e2d83fd307f697a5c172d2563c969fdcde6fa87a
 ---
